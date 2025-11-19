@@ -1,0 +1,16 @@
+/apps/marcas/__pycache__/
+/apps/marcas/migrations/*
+/apps/agencias/__pycache__/
+/apps/agencias/migrations/*
+/apps/modelos/__pycache__/
+/apps/modelos/migrations/*
+/apps/veiculos/__pycache__/
+/apps/veiculos/migrations/*
+/apps/clientes/__pycache__/
+/apps/clientes/migrations/*
+/apps/modopagamentos/__pycache__/
+/apps/modopagamentos/migrations/*
+/apps/motoristas/__pycache__/
+/apps/motoristas/migrations/*
+/apps/locacoes/__pycache__/
+/apps/locacoes/migrations/*
