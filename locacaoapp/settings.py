@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'modelos.apps.ModelosConfig',
     'agencias.apps.AgenciasConfig',
     'veiculos.apps.VeiculosConfig',
+    'locacoes.apps.LocacoesConfig',
     
     
 ]
