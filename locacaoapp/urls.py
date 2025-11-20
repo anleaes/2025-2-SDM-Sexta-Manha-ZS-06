@@ -25,5 +25,6 @@ urlpatterns = [
     path('modopagamentos/', include('modopagamentos.urls', namespace='modopagamento')),
     path('modelos/', include('modelos.urls', namespace='modelo')),
     path('agencias/', include('agencias.urls', namespace='agencia')),
+    path('veiculos/', include('veiculos.urls', namespace='veiculo')),
     
 ]
