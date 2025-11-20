@@ -5,7 +5,6 @@ from clientes.models import Cliente
 from modopagamentos.models import ModoPagamento
 from motoristas.models import Motorista
 
-# Create your models here.
 
 class Locacao(models.Model):
     STATUS_LOCACAO_CHOICES = [
@@ -17,7 +16,6 @@ class Locacao(models.Model):
 
     data_inicio = models.DateTimeField()
     data_fim = models.DateTimeField()
-    valor_total = models.FloatField(default=0)
     status = models.CharField(max_length=20, choices=STATUS_LOCACAO_CHOICES, default='ativa')
     observacoes = models.TextField(null=True, blank=True)
     data_criacao = models.DateTimeField(default=timezone.now)
@@ -29,16 +27,6 @@ class Locacao(models.Model):
 
     motoristas = models.ManyToManyField(Motorista, through='MotoristaLocacao', related_name='locacoes')
 
-    def calcular_valor_total(self):
-        dias = (self.data_fim - self.data_inicio).days
-        if dias < 1:
-            dias = 1
-        if self.veiculo and hasattr(self.veiculo, 'valor_diaria'):
-            self.valor_total = dias * self.veiculo.valor_diaria
-        else:
-            self.valor_total = 0
-        self.save()
-
     def finalizar_locacao(self):
         self.status = 'finalizada'
         self.save()
@@ -49,6 +37,7 @@ class Locacao(models.Model):
 
     def __str__(self):
         return f"Locação #{self.id} - {self.cliente.nome}"
+
 
 class MotoristaLocacao(models.Model):
     motorista = models.ForeignKey(Motorista, on_delete=models.CASCADE)
