@@ -10,3 +10,17 @@ class Agencia(models.Model):
     horario_funcionamento = models.CharField('Horário de Funcionamento', max_length=100)
     capacidade_frota = models.IntegerField('Capacidade da Frota')
     ativo = models.BooleanField('Ativo', default=True)
+
+    class Meta:
+        verbose_name = 'agência'
+        verbose_name_plural = 'agências'
+        ordering = ['id']
+
+    def __str__(self):
+        return f"{self.nome} - ({self.endereco})"
+
+    def consultar_disponibilidade(self):
+        pass
+
+    def gerar_relatorio(self):
+        pass
