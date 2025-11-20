@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'agencias.apps.AgenciasConfig',
     'veiculos.apps.VeiculosConfig',
     'locacoes.apps.LocacoesConfig',
+    'django_filters',
     
     
 ]

@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from .models import Locacao
 from .serializer import LocacaoSerializer
+from django_filters.rest_framework import DjangoFilterBackend
 
 # Create your views here.
 
