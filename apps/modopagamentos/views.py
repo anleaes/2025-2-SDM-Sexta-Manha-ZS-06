@@ -1,10 +1,7 @@
-from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Cliente
-from .serializer import ClienteSerializer
+from .models import ModoPagamento
+from .serializer import ModoPagamentoSerializer
 
-# Create your views here.
-
-class ClienteViewSet(viewsets.ModelViewSet):
-    queryset = Cliente.objects.all()
-    serializer_class = ClienteSerializer
+class ModoPagamentoViewSet(viewsets.ModelViewSet):
+    queryset = ModoPagamento.objects.all()
+    serializer_class = ModoPagamentoSerializer

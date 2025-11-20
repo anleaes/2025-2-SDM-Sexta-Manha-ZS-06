@@ -1,16 +1,16 @@
 from rest_framework import serializers
-from .models import Cliente
+from .models import ModoPagamento
 
-class ClienteSerializer(serializers.ModelSerializer):
+class ModoPagamentoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Cliente
+        model = ModoPagamento
         fields = [
             'id',
-            'nome',
-            'cpf',
-            'data_nascimento',
-            'endereco',
-            'telefone',
-            'email',
-            'ativo',
+            'data_pagamento',
+            'valor',
+            'metodo',
+            'status',
+            'comprovante',
+            'parcelado',
+            'numero_parcelas',
         ]
