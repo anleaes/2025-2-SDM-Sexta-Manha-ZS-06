@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from .models import Motorista
+from .serializer import MotoristaSerializer
 
 # Create your views here.
