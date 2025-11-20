@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'clientes.apps.ClientesConfig',
+    'modopagamentos.apps.ModopagamentosConfig',
     'marcas.apps.MarcasConfig',
     
 ]
