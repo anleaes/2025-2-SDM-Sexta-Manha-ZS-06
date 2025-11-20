@@ -10,3 +10,21 @@ class Cliente(models.Model):
     telefone = models.CharField('Telefone', max_length=20)
     email = models.EmailField('E-mail', unique=True)
     ativo = models.BooleanField('Ativo', default=True)
+
+    class Meta:
+        verbose_name = 'cliente'
+        verbose_name_plural = 'clientes'
+        ordering = ['id']
+
+    def __str__(self):
+        return f"{self.nome} - {self.cpf}"
+
+    def solicitar_locacao(self):
+        
+        return f"Cliente {self.nome} solicitou uma locação."
+
+    def cancelar_locacao(self):
+        return f"Cliente {self.nome} cancelou a locação."
+
+    def atualizar_dados(self):
+        return f"Dados do cliente {self.nome} atualizados."
