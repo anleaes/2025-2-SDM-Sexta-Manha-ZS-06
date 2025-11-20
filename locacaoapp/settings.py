@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'modopagamentos.apps.ModopagamentosConfig',
     'marcas.apps.MarcasConfig',
     'motoristas.apps.MotoristasConfig',
+    'modelos.apps.ModelosConfig',
     
 ]
 
